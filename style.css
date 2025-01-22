@@ -1,0 +1,93 @@
+header {
+    width: 100%; /* Definindo a largura como 100% */
+    background-color: lightblue; /* Apenas para visualização */
+    text-align: center; /* Centralizando o conteúdo horizontalmente */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex; /* Usando flexbox */
+    flex-direction: column; /* Ajustando a direção para vertical */
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0; /* Cor de fundo da página */
+    font-family: Arial, Helvetica, sans-serif; /* Família da fonte */
+}
+
+/* Estilizando a tag <nav> */
+nav {
+    position: fixed; /* Posicionamento fixo */
+    top: 0; /* Fixa o nav no topo da janela */
+    width: 100%;
+    display: flex;
+    background-color: #006b8f; /* Cor de fundo da caixa de navegação */
+    color: #fff; /* Cor do texto */
+    padding: 10px; /* Espaçamento interno */
+}
+
+/* Estilizando os links de navegação */
+nav a {
+    float: left;
+    color: #fff; /* Cor do texto dos links */
+    text-decoration: none; /* Removendo sublinhado padrão */
+    margin-right: 20px; /* Espaçamento entre os links */
+}
+
+/* Estilizando os links de navegação ao passar o mouse */
+nav a:hover {
+    text-decoration: underline; /* Adicionando sublinhado ao passar o mouse */
+    outline: none; /* Remove a marcação de foco */
+}
+
+.first_topic {
+    width: 100%;
+    margin-top: 50px;
+    display: block;
+    background-color: #006b8f; /* Cor de fundo da caixa */
+    padding: 20px;
+    border-radius: 0px; /* Borda arredondada */
+}
+
+.topic {
+    width: 100%;
+    display: block;
+    background-color: #006b8f; /* Cor de fundo da caixa */
+    padding: 20px;
+    border-radius: 0px; /* Borda arredondada */
+}
+
+.text {
+    width: 80%;
+    display: block;
+    background-color: #F0F0F0;
+    padding: 20px;
+    border-radius: 0px;
+    text-align: justify;
+    letter-spacing: 1px; /* Espaçamento entre letras */
+    line-height: 1.5; /* Espaçamento entre linhas */
+}
+
+h1 {
+    color: #ffffff; /* Cor do texto */
+    text-align: center;
+}
+
+h2 {
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.footnotesize {
+    font-size: 12px; /* Tamanho da fonte */
+    color: #333; /* Cor do texto */
+    letter-spacing: 1px; /* Espaçamento entre letras */
+    line-height: 1.5; /* Espaçamento entre linhas */
+}
+
+footer {
+    color: black; /* Cor do texto */
+    width: 100%; /* Largura total */
+    padding: 20px 0; /* Espaçamento interno */
+    text-align: center; /* Centraliza o texto horizontalmente */
+}
