@@ -1,10 +1,10 @@
 const url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSDkihaCFgP7tRCLNIg5P4L68nEWxwHXje_syKzsbAhdqvnFxgrRhbgRrRPgT4n8RdYWGMTwOK6simR/pub?gid=1243074535&single=true&output=csv";
 
-let dataArray = null; // Variável global
+var dataArray = null; 
 
 function parseCSV(data) {
-    const rows = data.split('\n'); // Divide as linhas
-    const headers = rows[0].split(','); // Pega a primeira linha como cabeçalhos
+    const rows = data.split('\n'); 
+    const headers = rows[0].split(','); 
 
     return rows.slice(1).map(row => {
         const values = [];
@@ -13,28 +13,25 @@ function parseCSV(data) {
 
         for (let char of row) {
             if (char === '"' && !insideQuotes) {
-                // Inicia um valor entre aspas
                 insideQuotes = true;
+
             } else if (char === '"' && insideQuotes) {
-                // Finaliza o valor entre aspas
                 insideQuotes = false;
+
             } else if (char === ',' && !insideQuotes) {
-                // Finaliza o campo
                 values.push(current.trim());
                 current = '';
+
             } else {
-                // Adiciona o caractere ao valor atual
                 current += char;
             }
         }
 
-        // Adiciona o último valor
         if (current) values.push(current.trim());
 
-        // Combina os valores com os cabeçalhos
         return headers.reduce((obj, header, index) => {
             const cleanHeader = header.trim();
-            obj[cleanHeader] = values[index] || ''; // Evita valores indefinidos
+            obj[cleanHeader] = values[index] || ''; 
             return obj;
         }, {});
     });

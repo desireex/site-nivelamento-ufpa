@@ -1,19 +1,21 @@
-var url = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSDkihaCFgP7tRCLNIg5P4L68nEWxwHXje_syKzsbAhdqvnFxgrRhbgRrRPgT4n8RdYWGMTwOK6simR/pub?gid=640552383&single=true&output=csv'
+const url = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSDkihaCFgP7tRCLNIg5P4L68nEWxwHXje_syKzsbAhdqvnFxgrRhbgRrRPgT4n8RdYWGMTwOK6simR/pub?gid=640552383&single=true&output=csv'
 
-let dataArray = null; // Variável global
+var dataArray = null; 
 
 function fetchData() {
     return fetch(url)
     .then(response => response.text())
     .then(data => {
-      const rows = data.split('\n'); // Divide as linhas
-      const headers = rows[9].split(','); // Pega a primeira linha como cabeçalhos
-      return rows.slice(1).map(row => { // Para cada linha depois da primeira
+      const rows = data.split('\n'); 
+      const headers = rows[9].split(','); 
+
+      return rows.slice(1).map(row => { 
         const values = row.split(',');
-        // Cria um objeto removendo espaços extras das chaves
+        
         return headers.reduce((obj, header, index) => {
-          const cleanHeader = header.trim(); // Remove espaços extras da chave
-          obj[cleanHeader] = values[index]; // Cria o objeto com a chave limpa
+          const cleanHeader = header.trim(); 
+          obj[cleanHeader] = values[index];
+
           return obj;
         }, {});
       });
@@ -30,6 +32,7 @@ fetchData().then(dataArray => {
             const innerContent = dataArray
                 .filter(integ => integ.CURSO !== '' && integ.EIXO.includes(doc.EIXO))
                 .map(int => `
+
                   <div class="integ-single">
                       <img src="${int.FOTO}" alt="${int.NOME}" />
 
@@ -37,9 +40,11 @@ fetchData().then(dataArray => {
 
                       <p>${int.CURSO}</p>
                   </div>  
+
               `).join('');
 
             return `
+
                 <div class="header-eixo">
                      <div class="container-header-eixo">
                         <img src="../img/SVG/Logo${doc.EIXO}.svg" alt="${doc.EIXO}" />
@@ -50,6 +55,7 @@ fetchData().then(dataArray => {
                 <div class="box container-integ">
                     ${innerContent}
                 </div>
+                
             `;
         })
         .join('');
