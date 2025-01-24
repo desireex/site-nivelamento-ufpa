@@ -7,7 +7,7 @@ function fetchData() {
     .then(response => response.text())
     .then(data => {
       const rows = data.split('\n'); 
-      const headers = rows[9].split(','); 
+      const headers = rows[0].split(','); 
 
       return rows.slice(1).map(row => { 
         const values = row.split(',');
@@ -25,7 +25,7 @@ function fetchData() {
 
 fetchData().then(dataArray => {
     const container_integ = document.querySelector('.eixo');
-
+  console.log(dataArray)
     container_integ.innerHTML = dataArray
     .filter(obj => obj.CURSO === '')
         .map(doc => {
@@ -34,7 +34,10 @@ fetchData().then(dataArray => {
                 .map(int => `
 
                   <div class="integ-single">
-                      <img src="${int.FOTO}" alt="${int.NOME}" />
+                      <div class="box-foto">
+                        <img src="${int.FOTO}" alt="${int.NOME}" />
+                      </div>
+                      
 
                       <h3>${int.NOME}</h3>
 
@@ -55,7 +58,7 @@ fetchData().then(dataArray => {
                 <div class="box container-integ">
                     ${innerContent}
                 </div>
-                
+
             `;
         })
         .join('');
