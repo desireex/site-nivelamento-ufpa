@@ -78,16 +78,7 @@ h2 {
     text-align: center;
 }
 
-.footnotesize {
-    font-size: 12px; /* Tamanho da fonte */
-    color: #333; /* Cor do texto */
-    letter-spacing: 1px; /* Espaçamento entre letras */
-    line-height: 1.5; /* Espaçamento entre linhas */
-}
-
-footer {
-    color: black; /* Cor do texto */
-    width: 100%; /* Largura total */
-    padding: 20px 0; /* Espaçamento interno */
-    text-align: center; /* Centraliza o texto horizontalmente */
+#footer-placeholder {
+    margin-top: auto; 
+    width: 100%;
 }

@@ -118,9 +118,18 @@
         <h1>Participe!</h1>
     </div>
 
-    <footer>
-        <p class="footnotesize">Nivelamento 2024.4</p>
-        <p class="footnotesize">ITEC UFPA</p>
-    </footer>
+    <div id="footer-placeholder"></div>
+
+    <script>
+
+      document.addEventListener("DOMContentLoaded", () => {
+        fetch("elements/footer/footer.html")
+          .then(response => response.text())
+          .then(data => {
+            document.getElementById("footer-placeholder").innerHTML = data;
+          })
+          .catch(error => console.error("Erro ao carregar o footer:", error));
+      });
+    </script>
 </body>
 </html>
