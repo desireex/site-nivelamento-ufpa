@@ -117,19 +117,8 @@
     <div class="topic">
         <h1>Participe!</h1>
     </div>
-
-    <div id="footer-placeholder"></div>
-
-    <script>
-
-      document.addEventListener("DOMContentLoaded", () => {
-        fetch("elements/footer/footer.html")
-          .then(response => response.text())
-          .then(data => {
-            document.getElementById("footer-placeholder").innerHTML = data;
-          })
-          .catch(error => console.error("Erro ao carregar o footer:", error));
-      });
-    </script>
+    <div id="footer-placeholder">
+        <script src="/elements/footer/footer.js"></script>
+    </div>
 </body>
 </html>
