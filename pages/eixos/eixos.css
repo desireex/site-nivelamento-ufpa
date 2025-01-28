@@ -2,6 +2,10 @@
     --cor-primaria: rgb(0 107 146);
 }
 
+*{
+    font-family: 'Roboto';
+}
+
 .divisoria{
     height: 55px;
     background-color: var(--cor-primaria);
