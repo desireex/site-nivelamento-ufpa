@@ -59,14 +59,3 @@ novoElemento.style.transition = "all 0.3s";
 const minhaDiv = document.querySelector('body');
 minhaDiv.prepend(novoElemento);
 
-window.addEventListener('scroll', () => {
-
-    const scrollTop = document.documentElement.scrollTop;
-    
-    if(scrollTop >= 50){
-        novoElemento.style.height = '0'
-    }
-    else{
-        novoElemento.style.height = '90px'
-    }
-  });

@@ -50,7 +50,7 @@ fetchData().then(dataArray => {
 
                 <div class="header-eixo">
                      <div class="container-header-eixo">
-                        <img src="../img/SVG/Logo${doc.EIXO}.svg" alt="${doc.EIXO}" />
+                        <img src="../../img/SVG/Logo${doc.EIXO}.svg" alt="${doc.EIXO}" />
 
                         <p>${doc.NOME}</p>
                      </div>

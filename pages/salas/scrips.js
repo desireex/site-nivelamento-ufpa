@@ -65,6 +65,7 @@ fetchData().then(dataArray => {
 
                 return `
                     <div class="local-single">
+                        <img src="../../img/SVG/under${doc.SIGLA}.svg"/>
                         <h3>Turma ${index + 1}</h3>
                         <h3>${loc.LOCAL}</h3>
 
@@ -81,12 +82,12 @@ fetchData().then(dataArray => {
 
         return ` 
             <div class="box header-locais">
-                <img src="../img/SVG/Logo${doc.SIGLA}white.svg"/>
+                <img src="../../img/SVG/Logo${doc.SIGLA}white.svg"/>
                 <h1>Eixo de ${doc.EIXO}</h1>
             </div>
             
             <div class="box body-locais">
-                <img src="../img/SVG/Logo${doc.SIGLA}.svg"/>
+                <img src="../../img/SVG/Logo${doc.SIGLA}.svg"/>
 
                 <div class="container-locais">
                     ${inner_container}

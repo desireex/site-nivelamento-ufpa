@@ -21,6 +21,11 @@
         padding: 0 10px;
         margin: 20px 0;
     }
+
+    .local-single img{
+        display: initial;
+        width: 30px;
+    }
 }
 
 @media screen and (max-width: 780px){
