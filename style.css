@@ -1,7 +1,72 @@
-header {
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #006b8f;
+    z-index: 99;
+}
+
+
+header nav a{
+    text-decoration: none;
+    color: #fff;
+    margin: 0 20px;
+}
+
+header nav a:hover{
+    filter: brightness(80%);
+}
+header img{
+    width: 40px;
+}
+
+.banner {
+    position: relative;
     width: 100%; /* Definindo a largura como 100% */
     background-color: lightblue; /* Apenas para visualização */
     text-align: center; /* Centralizando o conteúdo horizontalmente */
+    background-image: url(./img/PNG/Fundo.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.banner .shadow{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    position: absolute;
+}
+
+.banner .center{
+    position: relative;
+    padding: 80px 0;
+}
+
+.banner .center h3{
+    color: #000;
+    font-size: 22px;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+.banner .center p{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.banner img{
+    width: 600px;
 }
 
 body {
@@ -15,34 +80,9 @@ body {
     font-family: Arial, Helvetica, sans-serif; /* Família da fonte */
 }
 
-/* Estilizando a tag <nav> */
-nav {
-    position: fixed; /* Posicionamento fixo */
-    top: 0; /* Fixa o nav no topo da janela */
-    width: 100%;
-    display: flex;
-    background-color: #006b8f; /* Cor de fundo da caixa de navegação */
-    color: #fff; /* Cor do texto */
-    padding: 10px; /* Espaçamento interno */
-}
-
-/* Estilizando os links de navegação */
-nav a {
-    float: left;
-    color: #fff; /* Cor do texto dos links */
-    text-decoration: none; /* Removendo sublinhado padrão */
-    margin-right: 20px; /* Espaçamento entre os links */
-}
-
-/* Estilizando os links de navegação ao passar o mouse */
-nav a:hover {
-    text-decoration: underline; /* Adicionando sublinhado ao passar o mouse */
-    outline: none; /* Remove a marcação de foco */
-}
 
 .first_topic {
     width: 100%;
-    margin-top: 50px;
     display: block;
     background-color: #006b8f; /* Cor de fundo da caixa */
     padding: 20px;
