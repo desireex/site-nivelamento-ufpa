@@ -50,7 +50,7 @@ header img{
 
 .banner .center{
     position: relative;
-    padding: 80px 0;
+    padding: 80px 20px;
 }
 
 .banner .center h3{
@@ -66,7 +66,8 @@ header img{
 }
 
 .banner img{
-    width: 600px;
+    width: 90%;
+    max-width: 600px;
 }
 
 body {
