@@ -1,0 +1,70 @@
+:root{
+    --cor-primaria: rgb(0 107 146);
+}
+
+*{
+    font-family: 'Roboto';
+}
+
+.divisoria{
+    height: 55px;
+    background-color: var(--cor-primaria);
+    margin: 0;
+    border: none;
+    max-width: 100%;
+}
+
+.hidden {
+    display: none;
+}
+
+.nome {
+    display: flex;
+    flex-direction: row; 
+    align-items: center; 
+    justify-content: center; 
+    gap: 20px; 
+    position: relative;
+    margin: 70px 0; 
+}
+
+.nome img {
+    position: absolute;
+    left: 0; 
+    top: 50%; 
+    transform: translateY(-50%);
+    max-width: 70px; 
+}
+
+.nome h1 {
+    text-align: center;
+    color: black;
+    font-size: 2rem;
+    margin: 0;
+}
+
+.eixos {
+    max-width: 900px;
+    margin: 0px auto; 
+    padding: 20px;  
+}
+
+.eixos h2 {
+    font-size: 1.25rem;
+    margin-bottom: 15px;
+    color: var(--cor-primaria); 
+  }
+  
+.eixos p {
+    margin-bottom: 20px;
+    line-height: 1.6;
+  }
+  
+  ul {
+    padding-left: 20px;
+  }
+  
+  li {
+    margin-bottom: 8px;
+  }
+  

@@ -1,0 +1,41 @@
+:root{
+    --cor-primaria: rgb(0 107 146);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto';
+}
+
+body{
+    background-color: #f0f0f0;
+}
+
+.box{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.titulo{
+    padding: 55px 0;
+}
+
+.titulo h1{
+    font-size: 45px;
+    font-weight: 300;
+    color: var(--cor-primaria)
+}
+
+.topico {
+    color: #ffffff; 
+    text-align: center;
+    width: 100%;
+    display: block;
+    background-color: var(--cor-primaria); 
+    padding: 20px;
+    border-radius: 0px; 
+}
