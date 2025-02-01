@@ -1,7 +1,73 @@
-header {
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #006b8f;
+    z-index: 99;
+}
+
+
+header nav a{
+    text-decoration: none;
+    color: #fff;
+    margin: 0 20px;
+}
+
+header nav a:hover{
+    filter: brightness(80%);
+}
+header img{
+    width: 40px;
+}
+
+.banner {
+    position: relative;
     width: 100%; /* Definindo a largura como 100% */
     background-color: lightblue; /* Apenas para visualização */
     text-align: center; /* Centralizando o conteúdo horizontalmente */
+    background-image: url(./img/PNG/Fundo.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.banner .shadow{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    position: absolute;
+}
+
+.banner .center{
+    position: relative;
+    padding: 80px 20px;
+}
+
+.banner .center h3{
+    color: #000;
+    font-size: 22px;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+.banner .center p{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.banner img{
+    width: 90%;
+    max-width: 600px;
 }
 
 body {
@@ -15,34 +81,9 @@ body {
     font-family: Arial, Helvetica, sans-serif; /* Família da fonte */
 }
 
-/* Estilizando a tag <nav> */
-nav {
-    position: fixed; /* Posicionamento fixo */
-    top: 0; /* Fixa o nav no topo da janela */
-    width: 100%;
-    display: flex;
-    background-color: #006b8f; /* Cor de fundo da caixa de navegação */
-    color: #fff; /* Cor do texto */
-    padding: 10px; /* Espaçamento interno */
-}
-
-/* Estilizando os links de navegação */
-nav a {
-    float: left;
-    color: #fff; /* Cor do texto dos links */
-    text-decoration: none; /* Removendo sublinhado padrão */
-    margin-right: 20px; /* Espaçamento entre os links */
-}
-
-/* Estilizando os links de navegação ao passar o mouse */
-nav a:hover {
-    text-decoration: underline; /* Adicionando sublinhado ao passar o mouse */
-    outline: none; /* Remove a marcação de foco */
-}
 
 .first_topic {
     width: 100%;
-    margin-top: 50px;
     display: block;
     background-color: #006b8f; /* Cor de fundo da caixa */
     padding: 20px;
@@ -78,16 +119,108 @@ h2 {
     text-align: center;
 }
 
-.footnotesize {
-    font-size: 12px; /* Tamanho da fonte */
-    color: #333; /* Cor do texto */
-    letter-spacing: 1px; /* Espaçamento entre letras */
-    line-height: 1.5; /* Espaçamento entre linhas */
+footer {
+    margin-top: auto; 
+    width: 100%;
+    background-color: #f8f9fa;
+    padding: 10px 10px; 
 }
 
-footer {
-    color: black; /* Cor do texto */
-    width: 100%; /* Largura total */
-    padding: 20px 0; /* Espaçamento interno */
-    text-align: center; /* Centraliza o texto horizontalmente */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+
+#footer_todo {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 20px;
+    align-items: center; 
+    border-top: 1px solid #e0e0e0;
+    padding: 0 30px; 
 }
+
+#footer_esquerda {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+
+}
+
+#footer_direita h1 {
+    font-size: 50px;
+    color: #333;
+    text-align: right;
+
+}
+
+
+.footer_link {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background-color: #006b92;
+    color: white;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 8px;
+    font-size: 25px;
+    transition: background-color 0.3s ease;
+}
+
+.footer_link:hover {
+    background-color: #01526f;
+}
+
+
+#footer_direita {
+    font-family: 'Inter', sans-serif;
+    text-align: right;
+
+
+}
+
+#footer_logo img {
+
+    max-height: 200px; 
+    height: auto;
+    width: auto;
+    display: inline-block;
+}
+
+
+@media (max-width: 768px) {
+    #footer_logo img {
+        max-height: 150px; 
+    }
+    #footer_direita h1 {
+        font-size: 25px;
+        color: #333;
+    }
+}
+
+@media (max-width: 480px) {
+    #footer_logo img {
+        max-height: 100px; 
+    }
+    #footer_direita h1 {
+        font-size: 28px;
+        color: #333;
+ 
+    }
+    .footer_link {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        margin: 10px;
+        background-color: #006b92;
+        color: white;
+        text-align: center;
+        line-height: 40px;
+        border-radius: 8px;
+        font-size: 20px;
+        transition: background-color 0.3s ease;
+    }
+}
+
+
