@@ -48,6 +48,7 @@
     padding: 30px;
 }
 
+
 .body-locais{
     max-width: 1200px;
     width: 100%;
@@ -77,6 +78,10 @@
     color: #333;
     font-size: 17px;
     margin-bottom: 10px;
+}
+
+.local-single img{
+    width: 30px;
 }
 
 .local-single p{
