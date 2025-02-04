@@ -39,3 +39,11 @@ body{
     padding: 20px;
     border-radius: 0px; 
 }
+
+.divisoria{
+    height: 55px;
+    background-color: var(--cor-primaria);
+    margin: 0;
+    border: none;
+    max-width: 100%;
+}

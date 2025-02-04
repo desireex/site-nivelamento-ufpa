@@ -1,0 +1,42 @@
+:root{
+    --cor-primaria: rgb(0 107 146);
+}
+
+.conteudo {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+a {
+    color: var(--cor-primaria);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.planilha{
+    text-align: center;
+}
+
+iframe {
+    width: 86.84%;
+    height: 472px; 
+    border: none;
+    border-radius: 8px;
+    margin: 45px auto;
+    transform-origin: top center;
+    background-color: #f0f0f0;
+    overflow: hidden;
+}
