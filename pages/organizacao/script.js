@@ -25,7 +25,7 @@ function fetchData() {
 
 fetchData().then(dataArray => {
     const container_integ = document.querySelector('.eixo');
-  console.log(dataArray)
+    
     container_integ.innerHTML = dataArray
     .filter(obj => obj.CURSO === '')
         .map(doc => {
