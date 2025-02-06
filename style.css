@@ -84,10 +84,28 @@ body {
 
 .first_topic {
     width: 100%;
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: #006b8f; /* Cor de fundo da caixa */
     padding: 20px;
+    height: 80px;
     border-radius: 0px; /* Borda arredondada */
+}
+
+.first_topic .circulo{
+    width: 50px;
+    height: 50px;
+    animation: moveUpDown 1.5s infinite alternate ease-in-out;
+}
+
+@keyframes moveUpDown {
+    0% {
+        transform: translateY(10px);
+    }
+    100% {
+        transform: translateY(-10px);
+    }
 }
 
 .topic {
