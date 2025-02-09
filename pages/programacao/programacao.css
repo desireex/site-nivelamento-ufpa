@@ -2,6 +2,13 @@
     --cor-primaria: rgb(0 107 146);
 }
 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto';
+}
+
 .conteudo {
     max-width: 900px;
     margin: 20px auto;
@@ -26,17 +33,57 @@ a {
     font-weight: bold;
 }
 
-.planilha{
+table {
+    width: 80%;
+    border-collapse: collapse;
+    margin: 50px auto;
+}
+
+table, th, td {
+    border: 1px solid #000000;
+}
+
+th, td {
+    padding: 8px 12px;
     text-align: center;
 }
 
-iframe {
-    width: 86.84%;
-    height: 472px; 
-    border: none;
-    border-radius: 8px;
-    margin: 45px auto;
-    transform-origin: top center;
+.linha-especial, th{
+    background-color: #a2a2a2;
+}
+
+.linha-especial, .ib, .pc, .bio, .fi, .pg, .qi{
+    font-weight: bold;
+}
+
+.pc{
+    background-color:#a3dbff;
+}
+
+.ib{
+    background-color: #cbb7ff;
+}
+
+.pg{
+    background-color: #ffffaf;
+}
+
+.bio{
+    background-color: #b7ff99;
+}
+
+.fi{
+    background-color: #ffa2a2;
+}
+
+.qi{
+    background-color: #b3fff1;
+}
+
+.other{
     background-color: #f0f0f0;
-    overflow: hidden;
+}
+
+.time{
+    background-color: #dadada;
 }
