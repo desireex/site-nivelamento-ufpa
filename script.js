@@ -59,3 +59,43 @@ novoElemento.style.transition = "all 0.3s";
 const minhaDiv = document.querySelector('body');
 minhaDiv.prepend(novoElemento);
 
+
+
+
+const main = document.querySelector('.depoimentos-comp');
+const child = document.querySelectorAll('.depoimento-single');
+const nav = document.querySelectorAll('.nav');
+
+esvSlide(main, child, {
+    arrows: true,
+    asNavFor: false,
+    bullets: true,
+    autoPlay: false,
+    cssEase: true,
+    bullletsAling: 'center',
+    centerPadding: 20,
+    sliderMargin: 10,
+    slidesToShow: 1,
+    infinite: true,
+    responsive: [{
+        point: 1000,
+        seg: {
+            autoplayReverse: false,
+            bullletsAling: 'left',
+            slidesToShow: 2,
+            asNavFor: nav,
+            infinite: false,
+            autoPlay: true,
+            arrows: false
+        }
+    },{
+        point: 700,
+        seg:{
+            arrows: true,
+            slidesToShow: 0,
+            centerPadding: 10,
+            infinite: true
+        }
+    }]
+});
+
