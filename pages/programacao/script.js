@@ -44,7 +44,7 @@ fetchData(url).then(dataArray => {
     console.log(dataArray[aux][1])
     for(let j=0; j<dataArray[aux][1]; j++){
         elementos_lista += `
-        <li>Dia ${dataArray[aux+j+4][1]} ${eixo} ${j+1} - ${dataArray[aux+j+4][0]}: ${dataArray[aux+j+4][2]}</li>
+        <li>Dia ${dataArray[aux+j+4][1]}, ${eixo} ${j+1} - ${dataArray[aux+j+4][0]}: ${dataArray[aux+j+4][2]}</li>
         <ul>
             <li><a href="${dataArray[aux+j+4][4]}">Slide</a></li>
             <li><a href="${dataArray[aux+j+4][3]}">Apostila</a></li>

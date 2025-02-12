@@ -1,7 +1,12 @@
+:root{
+    --cor-primaria: rgb(0 107 146);
+}
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Roboto';
 }
 
 header{
@@ -32,9 +37,8 @@ header img{
 
 .banner {
     position: relative;
-    width: 100%; /* Definindo a largura como 100% */
-    background-color: lightblue; /* Apenas para visualização */
-    text-align: center; /* Centralizando o conteúdo horizontalmente */
+    width: 100%; 
+    background-color: lightblue; 
     background-image: url(./img/PNG/Fundo.png);
     background-position: center;
     background-repeat: no-repeat;
@@ -44,41 +48,74 @@ header img{
 .banner .shadow{
     width: 100%;
     height: 100%;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.85);
     position: absolute;
 }
 
-.banner .center{
+.center{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 400px;
     position: relative;
-    padding: 80px 20px;
+    padding: 80px 70px;
+    margin-left: 130px;
 }
 
-.banner .center h3{
+.center-text{
+    text-align: left;
+}
+
+.banner .center .center-text h3{
     color: #000;
-    font-size: 22px;
+    font-size: 30px;
     font-weight: bold;
-    margin: 20px 0;
+    margin-top: -18px; 
+    margin-bottom: 20px;
 }
 
-.banner .center p{
+.banner .center .center-text p{
     font-size: 18px;
     font-weight: bold;
+    padding-right: 100px;
 }
 
-.banner img{
-    width: 90%;
-    max-width: 600px;
+.banner .center .center-img img{
+    width: 275%; 
+    height: auto; 
 }
 
-body {
+.botao_inicial{
+    margin-top: 25px;
+    font-weight: bold;
+}
+
+.botao_inicial a{
+    margin: 20px 0;
+    border-radius: 10px;
+    background-color: var(--cor-primaria);
+    padding: 12px 20px;
+    text-decoration: none;
+    color: #F0F0F0;
+}
+
+.botao_inicial a:hover{
+    border-style: solid;
+    text-decoration: none;
+    color: var(--cor-primaria);
+    background-color:rgba(0, 107, 146, 0.1);
+    border-color: var(--cor-primaria);
+    border-width: 2px;
+}
+
+.inicial {
     margin: 0;
     padding: 0;
     display: flex; /* Usando flexbox */
     flex-direction: column; /* Ajustando a direção para vertical */
     justify-content: center;
     align-items: center;
-    background-color: #f0f0f0; /* Cor de fundo da página */
-    font-family: Arial, Helvetica, sans-serif; /* Família da fonte */
+    background-color: #fff; /* Cor de fundo da página */
 }
 
 
@@ -119,12 +156,28 @@ body {
 .text {
     width: 80%;
     display: block;
-    background-color: #F0F0F0;
-    padding: 20px;
+    background-color: #fff;
+    padding: 60px 80px;
     border-radius: 0px;
     text-align: justify;
     letter-spacing: 1px; /* Espaçamento entre letras */
     line-height: 1.5; /* Espaçamento entre linhas */
+}
+
+.text h4{
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.text-botao{
+    width: 80%;
+    display: block;
+    background-color: #fff;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
 }
 
 h1 {
@@ -135,6 +188,13 @@ h1 {
 h2 {
     color: #FFFFFF;
     text-align: center;
+}
+
+.lista{
+    display: flex;
+    flex-direction: row;
+    gap: 250px;
+    justify-content: center;
 }
 
 footer {
