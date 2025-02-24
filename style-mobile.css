@@ -1,9 +1,177 @@
+@media screen and (max-width: 1000px){
+    .informacoes{
+        flex-direction: column;
+        align-items: center;
+    }
+    .informacoes .cartao{
+        width: 50%;
+        margin: 30px auto;
+    }
+}
 
+@media screen and (max-width: 900px){
+    .linha .flex-container {
+        width: calc(50% - 10px);
+    }
+}
+
+@media screen and (max-width: 850px){
+    body .banner .center{
+        flex-direction: column;
+        padding: 50px 20px;
+    }
+
+    .banner .center-text{
+        width: 90%;
+        padding-left: 0px;
+        padding: 40px 0;
+        text-align: center;
+    }
+    .banner .center-text h3{
+        font-size: 24px;
+    }
+    .banner .center-text p{
+        margin-bottom: 40px;
+    }
+    .informacoes{
+        flex-direction: column;
+        align-items: center;
+    }
+    .informacoes h2{
+        font-size: 25px;
+    }
+    .informacoes p{
+        font-size: 20px;
+    }
+    .informacoes .cartao{
+        width: 80%;
+        margin: 30px auto;
+    }
+}
+
+@media (max-width: 768px) {
+    #footer_logo img {
+        max-height: 150px; 
+    }
+    #footer_direita h1 {
+        font-size: 30px;
+        color: #333;
+    }
+}
+
+@media (max-width: 750px) {
+    .hamburguer{
+        display: block;
+        z-index: 1;
+    }
+
+    .nav-list{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vW;
+        height: 100vh;
+        background-color: #006b92;
+        clip-path: circle(100px at 90% -15%);
+        transition: 1s ease-out;
+
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        gap: 0;
+        pointer-events: none;
+    }
+
+    nav.active .nav-list{
+        clip-path: circle(1500px at 90% -15%);
+        pointer-events: all;
+        font-size: 20px;
+        font-weight: bold;
+    }
+    nav.active .hamburguer{
+        position: fixed;
+        top: 26px;
+        right: 16px;
+        border-top-color: transparent;
+    }
+
+    nav.active .hamburguer::before{
+        transform: rotate(135deg);
+    }
+    nav.active .hamburguer::after{
+        transform: rotate(-135deg);
+        top: -7px;
+    }
+}
 
 @media screen and (max-width: 720px){
     .banner .center{
         position: relative;
-        padding: 50px 20px !important;        
+        padding: 50px 20px !important;     
+        flex-direction: column;  
     }
-    
+
+    .topic h1{
+        font-size: 24px;
+    }
+    .logo-eixos .element{
+        width: calc(50% - 10px);
+    }
+    .logo-eixos .element img{
+        width: 80px;
+    }
+}
+
+@media screen and (max-width: 640px){
+    .linha .flex-container {
+        width: calc(90%);
+        margin: 10px auto;
+    }
+    .text .lista ul{
+        width: 100%;
+    }
+}
+
+
+@media (max-width: 600px) {
+    #footer_todo{
+        display: flex;
+        flex-direction: column-reverse;
+        flex-wrap: wrap;
+        padding: 20px;
+    }
+
+    #footer_esquerda{
+        width: 100%;
+        text-align: center;
+    }
+
+    #footer_logo img {
+        max-height: 100px; 
+    }
+    #footer_direita h1 {
+        font-size: 30px;
+        margin-right: 10px;
+        color: #333;
+        text-align: center;
+ 
+    }
+    .footer_link {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        margin: 10px;
+        background-color: #006b92;
+        color: white;
+        text-align: center;
+        line-height: 40px;
+        border-radius: 8px;
+        font-size: 20px;
+        transition: background-color 0.3s ease;
+    }
+}
+@media (max-width: 400px){
+    .text-botao .btn-final{
+        font-size: 20px;
+    }
 }

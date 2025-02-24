@@ -7,25 +7,46 @@
 
     table {
         width: 80%;
-        font-size: 14px;
+        font-size: 2vw;
         margin: 20px auto;
     }
 
     th, td {
-        padding: 6px 8px;
+        padding: 0.7vw 1vw;
     }
 
-    ul li {
-        font-size: 14px;
-        margin-bottom: 10px;
-    }
-
-    a {
+    .material a {
         font-size: 14px;
     }
 
     .linha-especial, th {
-        font-size: 14px;
+        font-size: 2vwpx;
         padding: 10px;
+    }
+    .aula{
+        flex-direction: column;
+    }
+    .aula .titulo{
+        width: 80%;
+    }
+    .aula .titulo h1{
+        font-size: 40px;
+    }
+    .aula .titulo h2{
+        font-size: 25px;
+    }
+    .aula .assunto{
+        gap:0;
+        margin-top: 0;
+        text-align: center;
+    }
+    .aula .material{
+        justify-content: center;
+        gap: 60px;
+    }
+
+    .topico{
+        font-size: 12px;
+        flex-direction: column;
     }
 }

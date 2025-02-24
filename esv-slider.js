@@ -14,7 +14,7 @@ child: div que são os slides a serem mostrados
 
     arrowsOutside: true | false,
 
-    asNavFor: div onde se vai mostra o slide apresentado,
+    asNavFor: div onde se vai mostrar o slide apresentado,
 
     bullets: true | false,
 

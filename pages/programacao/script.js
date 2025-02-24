@@ -26,7 +26,6 @@ function fetchData(url) {
 
 
 fetchData(url).then(dataArray => {
-  console.log(dataArray);
   const eixosMap = {
     "IB": "Informática Básica",
     "PC": "Pré-Cálculo",
@@ -41,25 +40,36 @@ fetchData(url).then(dataArray => {
   for(let i=0; i<qtd_eixos; i++){
     var eixo = dataArray[aux][0];
     var elementos_lista = '';
-    console.log(dataArray[aux][1])
     for(let j=0; j<dataArray[aux][1]; j++){
         elementos_lista += `
-        <li>Dia ${dataArray[aux+j+4][1]}, ${eixo} ${j+1} - ${dataArray[aux+j+4][0]}: ${dataArray[aux+j+4][2]}</li>
-        <ul>
-            <li><a href="${dataArray[aux+j+4][4]}">Slide</a></li>
-            <li><a href="${dataArray[aux+j+4][3]}">Apostila</a></li>
-        </ul>
+        <div class="aula">
+            <div class="titulo">
+                <h1>${dataArray[aux+j+4][0]}</h1>
+                <h2>${dataArray[aux+j+4][1]}</h2>
+                <h3>${dataArray[aux+j+4][2]}</h3>
+            </div>
+            <div class="assunto">
+                <div>
+                    <p>${dataArray[aux+j+4][3]}</p>
+                </div>
+                <div class="material">
+                    <a href="${dataArray[aux+j+4][4]}"><p>Apostila</p></a>
+                    <a href="${dataArray[aux+j+4][5]}"><p>Slide</p></a>
+                </div>
+            </div>
+        </div>
         `
     }
     html_pag += `
     <div>
         <div class="topico">
+            <img src="../../img/SVG/Logo${eixo}White.svg"/>
             <h1>Eixo de ${eixosMap[eixo]}: ${dataArray[aux+1][0]} - ${dataArray[aux+1][1]}</h1>
         </div>
         <div class="conteudo">
-            <ul>
+            <div>
                 ${elementos_lista}
-            </ul>
+            </div>
         </div>
     </div>
     `

@@ -49,15 +49,12 @@ async function return_html() {
     try {
         const eixos = await obterColunasDoisEmDiante(linkDoCSV);
         const cursos = await obterPrimeiraColuna(linkDoCSV);
-        console.log(eixos);
-        console.log(cursos);
         for (let i = 0; i < eixos.length-1; i++) {
             document.getElementById(eixos[i][1]+'_eixo').innerHTML =
                 `<div class="nome">
                     <img src="../../img/SVG/Logo${eixos[i][1]}.svg">
                     <h1>${eixosMap[eixos[i][1]]}</h1>
                 </div>`;
-            console.log(eixosMap[eixos[i][1]]);
             const cursos_eixo = [];
             for (let j = 1; j < cursos.length; j++) {
                 if (eixos[i][j] === 'Sim') {
@@ -66,13 +63,13 @@ async function return_html() {
             }
 
             const listaCursos = cursos_eixo
-                .map(curso => `<li>${curso}</li>`)
+                .map(curso => `<li class="list-element">${curso}</li>`)
                 .join("");
 
             document.getElementById(eixos[i][1]+'_cursos').innerHTML =
                 `<div>
                     <h2>Cursos Recomendados:</h2>
-                    <ul>
+                    <ul class="list">
                         ${listaCursos}
                     </ul>
                 </div>`;
@@ -81,7 +78,16 @@ async function return_html() {
     } catch (erro) {
         console.error("Erro ao gerar o HTML:", erro);
     }
-    document.getElementById('IB').classList.remove('hidden');
+    document.getElementById('IB_eixo').classList.remove('hidden');
+    if (window.location.hash) {
+        const target = document.querySelector(window.location.hash);
+        if (target) {
+            setTimeout(() => {
+                target.scrollIntoView({ behavior: "smooth" });
+            }, 100);
+        }
+        history.replaceState(null, null, " ");
+    }
 }
 
 return_html();

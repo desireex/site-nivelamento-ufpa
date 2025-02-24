@@ -31,11 +31,11 @@
         font-size: 0.875rem;
     }
 
-    ul {
+    .list {
         padding-left: 15px;
     }
 
-    li {
+    .list-element {
         font-size: 0.875rem;
     }
 }
