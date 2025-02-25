@@ -231,7 +231,7 @@ h2 {
 footer {
     margin-top: auto; 
     width: 100%;
-    background-color: #f8f9fa;
+    background-color: #ffffff;
     padding: 10px 10px; 
 }
 
@@ -245,7 +245,7 @@ footer {
     grid-template-columns: 1fr 1fr; 
     gap: 20px;
     align-items: center; 
-    border-top: 1px solid #e0e0e0;
+    border-top: 1px solid #ffffff;
     padding: 10px 30px; 
 }
 

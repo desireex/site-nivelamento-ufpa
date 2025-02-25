@@ -60,6 +60,9 @@ async function return_html() {
                 if (eixos[i][j] === 'Sim') {
                     cursos_eixo.push(cursos[j]);
                 }
+                if(j==1 && eixos[i][j+1] === 'Sim'){
+                    cursos_eixo.push(cursos[j]);
+                }
             }
 
             const listaCursos = cursos_eixo
@@ -90,4 +93,13 @@ async function return_html() {
     }
 }
 
-return_html();
+async function loadData() {
+    
+    await return_html(); 
+
+    document.getElementById("loading-screen").style.display = "none"; 
+    document.getElementById("hidden-content").hidden = false; 
+}
+
+document.getElementById("hidden-content").hidden = true; 
+loadData();

@@ -44,58 +44,65 @@ function fetchData() {
 }
   
 
-fetchData().then(dataArray => {
-    const locais = document.querySelector('.locais');
+async function loadData() {
+    
+    await fetchData().then(dataArray => {
+        const locais = document.querySelector('.locais');
+    
+        locais.innerHTML = dataArray
+        .filter(obj => obj.LOCAL === '')
+        .map(doc => {
+    
+            const inner_container = dataArray
+                .filter(el => el.LOCAL !== '' && el.SIGLA === doc.SIGLA)
+                .map((loc, index) => {
+    
+                    const array_cursos = loc.CURSOS.split(',')
+                    const sigle_cursos = array_cursos
+                        .map((cur, index) => `
+    
+                            <p>${index+1} - ${cur.trim()}</p>
+    
+                        `).join(''); 
+    
+                    return `
+                        <div class="local-single">
+                            <img src="../../img/SVG/under${doc.SIGLA}.svg"/>
+                            <h3>Turma ${index + 1}</h3>
+                            <h3>${loc.LOCAL}</h3>
+    
+                            <p>Cursos:</p>
+    
+                            <div class="container-cursos">
+                                ${sigle_cursos}
+                            </div>
+    
+                            <a href="${loc.MAPS}" target="_blank">Encontre sua sala</a>
+    
+                        </div>`
+                }).join('')
+    
+            return ` 
+                <div class="box header-locais">
+                    <img src="../../img/SVG/Logo${doc.SIGLA}white.svg"/>
+                    <h1>Eixo de ${doc.EIXO}</h1>
+                </div>
+                
+                <div class="box body-locais">
+                    <img src="../../img/SVG/Logo${doc.SIGLA}.svg"/>
+    
+                    <div class="container-locais">
+                        ${inner_container}
+                    </div> 
+                </div>`
+        }).join('')
+    
+        console.log(dataArray)
+    }); 
 
-    locais.innerHTML = dataArray
-    .filter(obj => obj.LOCAL === '')
-    .map(doc => {
+    document.getElementById("loading-screen").style.display = "none"; 
+    document.getElementById("hidden-content").hidden = false; 
+}
 
-        const inner_container = dataArray
-            .filter(el => el.LOCAL !== '' && el.SIGLA === doc.SIGLA)
-            .map((loc, index) => {
-
-                const array_cursos = loc.CURSOS.split(',')
-                const sigle_cursos = array_cursos
-                    .map((cur, index) => `
-
-                        <p>${index+1} - ${cur.trim()}</p>
-
-                    `).join(''); 
-
-                return `
-                    <div class="local-single">
-                        <img src="../../img/SVG/under${doc.SIGLA}.svg"/>
-                        <h3>Turma ${index + 1}</h3>
-                        <h3>${loc.LOCAL}</h3>
-
-                        <p>Cursos:</p>
-
-                        <div class="container-cursos">
-                            ${sigle_cursos}
-                        </div>
-
-                        <a href="${loc.MAPS}" target="_blank">Encontre sua sala</a>
-
-                    </div>`
-            }).join('')
-
-        return ` 
-            <div class="box header-locais">
-                <img src="../../img/SVG/Logo${doc.SIGLA}white.svg"/>
-                <h1>Eixo de ${doc.EIXO}</h1>
-            </div>
-            
-            <div class="box body-locais">
-                <img src="../../img/SVG/Logo${doc.SIGLA}.svg"/>
-
-                <div class="container-locais">
-                    ${inner_container}
-                </div> 
-            </div>`
-    }).join('')
-
-    console.log(dataArray)
-})
-
-
+document.getElementById("hidden-content").hidden = true; 
+loadData();

@@ -23,7 +23,9 @@ function fetchData() {
 }
   
 
-fetchData().then(dataArray => {
+async function loadData() {
+    
+  await fetchData().then(dataArray => {
     const container_integ = document.querySelector('.eixo');
     
     container_integ.innerHTML = dataArray
@@ -63,4 +65,11 @@ fetchData().then(dataArray => {
         })
         .join('');
 
-});
+});; 
+
+  document.getElementById("loading-screen").style.display = "none"; 
+  document.getElementById("hidden-content").hidden = false; 
+}
+
+document.getElementById("hidden-content").hidden = true; 
+loadData();
